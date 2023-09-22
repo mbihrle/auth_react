@@ -1,0 +1,30 @@
+.formRegister {
+    max-width: 330px;
+    padding: 1rem;
+  }
+
+  .formRegister .formFloating:focus-within {
+    z-index: 2;
+  }
+
+  .formRegister input[id="lastNameInput"] {
+    border-radius: 0;
+  }
+  .formRegister input[id="emailInput"] {
+    border-radius: 0;
+  }
+  .formRegister input[id="passwordInput"] {
+    border-radius: 0;
+  }
+
+ .formRegister input[id="firstNameInput"] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }  
+
+ .formRegister input[id="passwordConfirmInput"] {
+    margin-bottom: 10px;
+   border-top-left-radius: 0; 
+    border-top-right-radius: 0;
+  }  
+

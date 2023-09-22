@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Home } from './components/home/Home';
+import { Login } from './components/login/Login';
+// import  {LoginForm } from './components/login/LoginForm'
+import { Register } from './components/register/Register';
+import { ForgotPassword } from './components/forgotPassword/ForgotPassword';
+import  {ResetPassword} from './components/resetPassword/ResetPassword'
+import { Nav } from './components/nav/Nav';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Nav />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
+                {/* <Route path='/logout' element={<Home />} /> */}
+                <Route path='/forgot' element={<ForgotPassword />} />
+                <Route path='/reset/:token' element={<ResetPassword />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

@@ -1,0 +1,10 @@
+.formAuthCode {
+    max-width: 330px;
+    padding: 1rem;
+  }
+
+
+  .formAuthCode .formFloating:focus-within {
+    z-index: 2;
+  }
+
